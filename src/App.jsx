@@ -11,6 +11,7 @@ import {
 import { MenuNavbar } from "./components/menu";
 import { HomePage } from "./pages";
 
+//commit test
 function App() {
   return (
     <>
