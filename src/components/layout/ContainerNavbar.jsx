@@ -1,9 +1,17 @@
 // src/components/layout/ContainerNavbar.jsx
+import { Link } from "react-router-dom";
+
 function ContainerNavbar() {
   return (
     <div className="navbar">
       {/* 이케아 로고 */}
-      <img src="/img/ikea_icon.png" alt="IKEA" />
+      <Link to="/">
+        <img
+          src="/img/ikea_icon.png"
+          alt="IKEA"
+          className="w-[98.359px] h-[40px] max-w-none flex-none"
+        />
+      </Link>
 
       {/* 검색바 */}
       <div className="navbar-search">

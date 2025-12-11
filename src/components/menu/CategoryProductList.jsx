@@ -1,6 +1,6 @@
-import productList from "../data/productList";
+import productList from "../../data/productList";
 
-function HomePage_CategoryProductList({ category }) {
+function CategoryProductList({ category }) {
   //category 값 확인후 알맞은 리스트 띄우는 삼항 연산자
   const filteredProducts =
     category === "none"
@@ -55,4 +55,4 @@ function HomePage_CategoryProductList({ category }) {
   );
 }
 
-export default HomePage_CategoryProductList;
+export default CategoryProductList;

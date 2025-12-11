@@ -48,10 +48,6 @@ body {
   align-items: center;
 }
 
-.navbar img {
-  width: 98.359px;
-  height: 40px;
-}
 .navbar-search {
   margin: 0px 40px;
   background-color: lightgray;
@@ -143,7 +139,7 @@ body {
   gap: 20px;
   overflow-x: auto;
   padding-bottom: 20px;
-  margin-bottom: 100px;
+  margin-bottom: 10px;
 }
 
 /* 스크롤바 전체 */

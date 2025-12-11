@@ -1,25 +1,15 @@
 // src/pages/HomePage.jsx
 import { useState } from "react";
-import MenuNavbar from "../components/menu/MenuNavbar";
+
 import HomePage_SpecialPrice from "./HomePage_SpecialPrice";
-import HomePage_CategoryProductList from "./HomePage_CategoryProductList";
 
 function HomePage() {
-  const [selectedCategory, setSelectedCategory] = useState("none");
-
-  //카테고리 버튼 토글 (현 상태 category와 새로 들어올 category 값이 같으면  none)
-  const handleSelectCategory = (category) => {
-    setSelectedCategory((prev) => (prev === category ? "none" : category));
-  };
-
   return (
     <div>
       {/* 카테고리 분류 메뉴바 */}
-      <MenuNavbar onSelectCategory={handleSelectCategory} />
 
       {/* main homepage */}
       <div className="px-4 flex flex-col ">
-        <HomePage_CategoryProductList category={selectedCategory} />
         <HomePage_Main />
         <HomePage_SpecialPrice />
       </div>
