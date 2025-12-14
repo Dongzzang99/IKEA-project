@@ -1,16 +1,18 @@
+// src/components/menu/CategoryProductList.jsx
 import productList from "../../data/productList";
+import { Link } from "react-router-dom";
 
-function CategoryProductList({ category }) {
+function CategoryProductList({ category, isOpen }) {
   //category 값 확인후 알맞은 리스트 띄우는 삼항 연산자
   const filteredProducts =
     category === "none"
       ? []
       : productList.filter((item) => item.category === category);
 
-  const isOpen = filteredProducts.length > 0;
-
   return (
-    //상품 리스트 애니메이션 태그
+    //슬라이드 애니메이션 div
+    //isopen ture - 열림
+    //isopen false - 닫침
     <div
       className={`
       overflow-hidden transition-all duration-300 ease-out
@@ -23,13 +25,18 @@ function CategoryProductList({ category }) {
     >
       <div className="overflow-x-auto">
         <div className="flex gap-3 w-max pb-4">
+          {/* filteredProducts item - 10개 까지 화면 출력 */}
           {filteredProducts.slice(0, 10).map((item) => {
             const discountPrice = Math.floor(
               item.price * (1 - item.sale / 100)
             );
 
             return (
-              <div key={item.id} className="w-[180px] flex-shrink-0">
+              <Link
+                to={`/products/${item.id}`}
+                key={item.id}
+                className="w-[180px] flex-shrink-0 cursor-pointer"
+              >
                 <img
                   src={item.image}
                   className="pb-4 w-full h-[180px] object-cover"
@@ -46,7 +53,7 @@ function CategoryProductList({ category }) {
                 <p className="text-[0.75rem] text-gray-500">
                   기존가: ￦{item.price.toLocaleString()}
                 </p>
-              </div>
+              </Link>
             );
           })}
         </div>

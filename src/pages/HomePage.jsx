@@ -1,5 +1,4 @@
 // src/pages/HomePage.jsx
-import { useState } from "react";
 
 import HomePage_SpecialPrice from "./HomePage_SpecialPrice";
 
