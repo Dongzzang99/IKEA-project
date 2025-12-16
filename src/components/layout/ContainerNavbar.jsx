@@ -26,7 +26,9 @@ function ContainerNavbar() {
       <div className="navbar-icon-group">
         <i className="fas fa-user"></i>
         <i className="far fa-heart"></i>
-        <i className="fas fa-shopping-bag"></i>
+        <Link to="/cart">
+          <i className="fas fa-shopping-bag cursor-pointer"></i>
+        </Link>
         <i className="fas fa-bars"></i>
       </div>
     </div>

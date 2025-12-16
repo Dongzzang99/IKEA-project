@@ -1,4 +1,5 @@
 import productList from "../data/productList";
+import { Link } from "react-router-dom";
 
 function HomePage_SpecialPrice() {
   return (
@@ -11,7 +12,7 @@ function HomePage_SpecialPrice() {
       <div className="overflow-x-auto">
         <div className="flex gap-6 w-max pb-4">
           {productList
-            .filter((item) => item.specialPrice) // specialPrice == ture 인것들만
+            .filter((item) => item.specialPrice) // specialPrice == true 인것들만
             .slice(0, 10) //10개 반복
             .map((item) => {
               const discountPrice = Math.floor(
@@ -19,7 +20,11 @@ function HomePage_SpecialPrice() {
               );
 
               return (
-                <div key={item.id} className="w-[180px] flex-shrink-0">
+                <Link
+                  to={`/products/${item.id}`}
+                  key={item.id}
+                  className="w-[180px] flex-shrink-0 block"
+                >
                   <img
                     src={item.image}
                     className="pb-4 w-full h-[180px] object-cover"
@@ -46,7 +51,7 @@ function HomePage_SpecialPrice() {
                   <p className="text-[0.75rem] text-gray-500">
                     기존가: <span>￦{item.price.toLocaleString()}</span>
                   </p>
-                </div>
+                </Link>
               );
             })}
         </div>
