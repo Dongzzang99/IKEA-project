@@ -1,5 +1,5 @@
 const productList = [
-  // ✅ 수납가구 (1~6)
+  // 수납가구
   {
     id: 1,
     specialPrice: true,
@@ -67,7 +67,7 @@ const productList = [
     rating: 4.6,
   },
 
-  // ✅ 수납용품 (7~12)
+  //  수납용품
   {
     id: 7,
     specialPrice: true,
@@ -135,7 +135,7 @@ const productList = [
     rating: 4.4,
   },
 
-  // ✅ 침대/매트릭스 (13~18)
+  //  침대/매트릭스
   {
     id: 13,
     specialPrice: true,
@@ -203,7 +203,7 @@ const productList = [
     rating: 4.3,
   },
 
-  // ✅ 쇼파/암체어 (19~24)
+  //  쇼파/암체어
   {
     id: 19,
     specialPrice: true,
@@ -271,7 +271,7 @@ const productList = [
     rating: 4.5,
   },
 
-  // ✅ 식탁/테이블/의자 (25~30)
+  //  식탁/테이블/의자
   {
     id: 25,
     specialPrice: true,
@@ -339,7 +339,7 @@ const productList = [
     rating: 4.6,
   },
 
-  // ✅ 책상 (31~35)
+  //  책상
   {
     id: 31,
     specialPrice: true,
@@ -396,7 +396,7 @@ const productList = [
     rating: 4.9,
   },
 
-  // ✅ 주방가구 (36~40)
+  // 주방가구
   {
     id: 36,
     specialPrice: true,

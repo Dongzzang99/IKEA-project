@@ -43,27 +43,29 @@ function App() {
   }, [location.pathname]);
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <ContainerHeader />
-      <MainLayout>
-        {/* 검색 컴포넌트 */}
-        <ContainerNavbar />
 
-        {/* 가구 카테고리 카드1 */}
-        <MenuNavbar onSelectCategory={handleSelectCategory} />
+      <div className="flex-1">
+        <MainLayout>
+          {/* 검색 컴포넌트 */}
+          <ContainerNavbar />
 
-        {/* 가구 카테고리 카드2 - 카테고리 카드 누르면 나오는 리스트 */}
+          {/* 가구 카테고리 카드1 */}
+          <MenuNavbar onSelectCategory={handleSelectCategory} />
 
-        <CategoryProductList category={selectedCategory} isOpen={isOpen} />
+          {/* 가구 카테고리 카드2 - 카테고리 카드 누르면 나오는 리스트 */}
+          <CategoryProductList category={selectedCategory} isOpen={isOpen} />
 
-        <Routes>
-          <Route path="/" element={<HomePage />}></Route>
-          <Route path="/products/:id" element={<ProductDetailPage />} />
-          <Route path="/cart" element={<Cart />} />
-        </Routes>
-      </MainLayout>
-      <Footer></Footer>
-    </>
+          <Routes>
+            <Route path="/" element={<HomePage />}></Route>
+            <Route path="/products/:id" element={<ProductDetailPage />} />
+            <Route path="/cart" element={<Cart />} />
+          </Routes>
+        </MainLayout>
+      </div>
+      <Footer />
+    </div>
   );
 }
 

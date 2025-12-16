@@ -42,14 +42,23 @@ function CategoryProductList({ category, isOpen }) {
                   className="pb-4 w-full h-[180px] object-cover"
                 />
 
+                {/* 특가 상품 표시 간격은 벌린채로, sale값이 0 보다 크면 표시, 0이면 text-transparent(텍스트 투명)*/}
+                <p
+                  className={`pb-2 text-xs ${
+                    item.sale > 0
+                      ? "text-red-500 font-bold"
+                      : "text-transparent"
+                  }`}
+                >
+                  더 낮은 새로운 가격
+                </p>
+
                 <p className="font-bold text-sm">{item.title}</p>
                 <p className="pb-2 text-[0.75rem] text-gray-600">{item.note}</p>
-
                 <p className="font-bold text-[1.25rem] pb-1">
                   <span className="relative top-[-0.5em] text-[0.6em]">￦</span>
                   {discountPrice.toLocaleString()}
                 </p>
-
                 <p className="text-[0.75rem] text-gray-500">
                   기존가: ￦{item.price.toLocaleString()}
                 </p>
