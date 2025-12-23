@@ -1,5 +1,3 @@
-// src/pages/HomePage.jsx
-
 import HomePage_SpecialPrice from "./HomePage_SpecialPrice";
 
 function HomePage() {

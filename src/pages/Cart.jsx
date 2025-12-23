@@ -1,8 +1,7 @@
-// src/pages/Cart.jsx
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { updateQuantity } from "../data/Cart_Redux"; // ✅ 경로 확인!
+import { updateQuantity } from "../data/Cart_Redux";
 
 function Cart() {
   const items = useSelector((state) => state.cart.items);
@@ -28,7 +27,7 @@ function Cart() {
   };
 
   // 화면에 보여줄 총 금액은 로컬 기준으로 계산
-  const totalPrice = localItems.reduce(
+  const totalPrice = localItems.reduce(s
     (sum, item) => sum + item.price * item.quantity,
     0
   );
@@ -44,7 +43,6 @@ function Cart() {
       );
     });
 
-    // TODO: 결제 페이지 이동, 모달, 알림 등 나중에 추가
     alert("결제 로직은 아직 구현 전입니다 수량만 Redux에 반영");
   };
 

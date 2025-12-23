@@ -1,4 +1,3 @@
-// src/components/layout/ContainerNavbar.jsx
 import { Link } from "react-router-dom";
 
 function ContainerNavbar() {

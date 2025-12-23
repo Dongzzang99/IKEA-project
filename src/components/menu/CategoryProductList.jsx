@@ -1,4 +1,3 @@
-// src/components/menu/CategoryProductList.jsx
 import productList from "../../data/productList";
 import { Link } from "react-router-dom";
 

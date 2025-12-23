@@ -1,4 +1,3 @@
-// src/components/layout/ContainerHeader.jsx
 function ContainerHeader() {
   return (
     <div className="Black-Bar">

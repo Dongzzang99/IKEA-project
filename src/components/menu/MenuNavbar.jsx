@@ -1,5 +1,3 @@
-// src/components/menu/MenuNavbar.jsx
-
 //가구 종류 카드 나열 리스트
 const item_list = [
   { id: 1, title: "신상품과 컬렉션", image: "/img/menu_card/card1.jpg" },
