@@ -26,7 +26,10 @@ function HomePage_SpecialPrice() {
                   className="w-[180px] flex-shrink-0 block"
                 >
                   <img
-                    src={item.image}
+                    src={`${import.meta.env.BASE_URL}${item.image.replace(
+                      /^\//,
+                      ""
+                    )}`}
                     className="pb-4 w-full h-[180px] object-cover"
                   />
 

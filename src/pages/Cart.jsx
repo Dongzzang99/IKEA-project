@@ -63,7 +63,11 @@ function Cart() {
           </div>
         </div>
         <div>
-          <img className="w-[300px]" src="/img/ikea-bag.png" />
+          <img
+            className="w-[300px]"
+            src={`${import.meta.env.BASE_URL}img/ikea-bag.png`}
+            alt="IKEA bag"
+          />
         </div>
       </div>
     );
@@ -92,7 +96,10 @@ function Cart() {
             className="flex gap-4 items-center border-b border-gray-200 pb-4 mb-4"
           >
             <img
-              src={item.image}
+              src={`${import.meta.env.BASE_URL}${item.image.replace(
+                /^\//,
+                ""
+              )}`}
               alt={item.title}
               className="w-24 h-24 object-cover rounded"
             />

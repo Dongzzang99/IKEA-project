@@ -6,7 +6,7 @@ function ContainerNavbar() {
       {/* 이케아 로고 */}
       <Link to="/">
         <img
-          src="/img/ikea_icon.png"
+          src={`${import.meta.env.BASE_URL}img/ikea_icon.png`}
           alt="IKEA"
           className="w-[98.359px] h-[40px] max-w-none flex-none"
         />

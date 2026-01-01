@@ -39,11 +39,10 @@ function ProductDetailPage() {
       <div className="flex justify-center gap-32">
         {/* 왼쪽 이미지 */}
         <img
-          src={product.image}
+          src={`${import.meta.env.BASE_URL}${product.image.replace(/^\//, "")}`}
           alt={product.title}
           className="w-[40rem] h-auto object-contain rounded-lg"
         />
-
         {/* 오른쪽 상품 제목 및 가격 */}
         <div className="flex flex-col justify-start gap-2">
           <div>

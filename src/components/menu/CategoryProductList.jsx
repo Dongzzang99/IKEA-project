@@ -37,7 +37,8 @@ function CategoryProductList({ category, isOpen }) {
                 className="w-[180px] flex-shrink-0 cursor-pointer"
               >
                 <img
-                  src={item.image}
+                  src={`${import.meta.env.BASE_URL}${item.image}`}
+                  alt={item.title}
                   className="pb-4 w-full h-[180px] object-cover"
                 />
 

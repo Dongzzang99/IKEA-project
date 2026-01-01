@@ -41,7 +41,7 @@ function HomePage_Main() {
         <div className="w-1/2 relative">
           <a href="www.naver.com">
             <img
-              src="/img/event_img/event_img1.jpg"
+              src={`${import.meta.env.BASE_URL}img/event_img/event_img1.jpg`}
               className="h-full w-full object-cover"
             />
             {/* 1번 카드 그라데이션 */}
@@ -66,7 +66,7 @@ function HomePage_Main() {
           {/* 왼쪽 2번 카드 */}
           <a href="www.naver.com" className="relative block h-[49%] ">
             <img
-              src="/img/event_img/event_img2.jpg"
+              src={`${import.meta.env.BASE_URL}img/event_img/event_img2.jpg`}
               className="h-full w-full object-cover "
             />
             {/* 2번카드 그라데이션 */}
