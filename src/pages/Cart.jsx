@@ -27,7 +27,7 @@ function Cart() {
   };
 
   // 화면에 보여줄 총 금액은 로컬 기준으로 계산
-  const totalPrice = localItems.reduce(s
+  const totalPrice = localItems.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0
   );
