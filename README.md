@@ -1,7 +1,7 @@
+<p align="center">
 <img width="353" height="143" alt="ikea_icon" src="https://github.com/user-attachments/assets/42ea9955-90f0-4152-a2df-6f4d4206a6f3" />
-
-# 🪑 IKEA Clone – 가구 주문 웹 페이지
-
+</p>
+## 🪑 IKEA Clone – 가구 주문 웹 페이지
 IKEA 공식 웹사이트를 참고하여 제작한 **가구 주문 웹 페이지 클론 프로젝트**입니다.  
 ---
 
@@ -116,7 +116,11 @@ IKEA 공식 웹사이트를 참고하여 제작한 **가구 주문 웹 페이지
 위 컴포넌트들을 조합하여 **공통 레이아웃 구조 구성**
 
 ---
+### 📄 `실제 동작 gif`
+![최종3](https://github.com/user-attachments/assets/77878b15-c726-4b94-ad03-ce5359262543)
 
+
+--
 ## 📈 향후 개선 사항 (Optional)
 
 - 실제 API 연동
