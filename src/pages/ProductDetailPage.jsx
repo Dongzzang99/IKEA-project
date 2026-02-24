@@ -3,7 +3,7 @@ import productList from "../data/productList";
 
 import { useDispatch } from "react-redux";
 import { addToCart } from "../data/Cart_Redux";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function ProductDetailPage() {
   const { id } = useParams();
@@ -12,6 +12,7 @@ function ProductDetailPage() {
   const dispatch = useDispatch(); //redux - dispatch 사용
   const [quantity, setQuantity] = useState(1); //물건 수량  state
   const [isButtonActive, setIsButtonActive] = useState(false);
+  const [wactched, setWatched] = useState([]);
 
   const handleAddToCart = () => {
     dispatch(
@@ -33,6 +34,10 @@ function ProductDetailPage() {
   if (!product) {
     return <div className="p-4">상품을 찾을 수 없습니다.</div>;
   }
+  //useEffect를 통해서 접속하면 물건 번호 저장하기
+  useEffect(() => {
+    localStorage.setItem("watched", JSON.stringify(product.title));
+  }, []);
 
   return (
     <div className="p-4 relative">
